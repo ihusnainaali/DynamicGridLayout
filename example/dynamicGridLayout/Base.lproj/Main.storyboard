@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="layoutTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="u7V-YH-zPe">
+                                <rect key="frame" x="0.0" y="87" width="375" height="510"/>
+                                <color key="backgroundColor" red="0.51465368723380889" green="0.51374487770701083" blue="0.57142290609137059" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="displayP3"/>
+                                <collectionViewLayout key="collectionViewLayout" id="Hod-ln-4du" customClass="DynamicGridLayout" customModule="layoutTest" customModuleProvider="target"/>
+                                <cells/>
+                            </collectionView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="01i-UW-gqC">
+                                <rect key="frame" x="168" y="610" width="39" height="37"/>
+                                <color key="pageIndicatorTintColor" systemColor="opaqueSeparatorColor" red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="currentPageIndicatorTintColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="u7V-YH-zPe" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="43Z-z6-MSb"/>
+                            <constraint firstItem="u7V-YH-zPe" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="7R7-un-BH6"/>
+                            <constraint firstItem="01i-UW-gqC" firstAttribute="top" secondItem="u7V-YH-zPe" secondAttribute="bottom" constant="13" id="Dxr-6l-LYp"/>
+                            <constraint firstItem="u7V-YH-zPe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="87" id="FeA-qX-5ab"/>
+                            <constraint firstItem="01i-UW-gqC" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ZNn-iR-iJv"/>
+                            <constraint firstItem="u7V-YH-zPe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="csa-5a-w8h"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="01i-UW-gqC" secondAttribute="bottom" constant="20" id="jxg-v8-dgm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="u7V-YH-zPe" secondAttribute="bottom" constant="70" id="nDB-WU-Ryx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="u7V-YH-zPe" id="YKq-Yz-RbH"/>
+                        <outlet property="pageControl" destination="01i-UW-gqC" id="ZKl-vN-vUt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="129.08545727136433"/>
+        </scene>
+    </scenes>
+</document>
