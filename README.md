@@ -7,9 +7,11 @@ DynamicGridLayoutDelegate is a subclass of UICollectionViewLayout inspired by iO
 Simply add DynamicGridLayout.swift to your project and adopt your view controller to DynamicGridLayoutDelegate protocol by adding three variables:
 
 ```swift
-var cellsPerRow: Int = 3
-var cellsPerColumn: Int = 4
-var cellsSpacing: Int = 10
+class YourViewController: UIViewController, DynamicGridLayoutDelegate {
+    var cellsPerRow: Int = 3
+    var cellsPerColumn: Int = 4
+    var cellsSpacing: Int = 10
+}
 ```
 - *cellsPerRow* is a number of cells per one row (x axis) 
 - *cellsPerColumn* is a number of cells per one column (y axis)
